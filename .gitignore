@@ -1,0 +1,17 @@
+# Virtual environment
+plantenv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code (optional)
+.vscode/
+
+# OS files
+.DS_Store
