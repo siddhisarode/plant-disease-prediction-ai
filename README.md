@@ -208,8 +208,9 @@ Open the frontend folder using Live Server or any local web server.
 ## 👨‍💻 Author
 
 **Siddhi Sarode**  
-AI / ML Developer — Computer Vision & Deep Learning
+AI / ML Developer — Python, Computer Vision & Deep Learning
 
 ---
 
 ## ⭐ If you like this project, give it a star!
+
