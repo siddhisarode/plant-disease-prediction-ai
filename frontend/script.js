@@ -16,6 +16,10 @@ async function predictDisease() {
             body: formData
         });
 
+        if (!response.ok) {
+            throw new Error(`Server error: ${response.status}`);
+        }
+
         const data = await response.json();
 
         document.getElementById("disease").innerText = data.prediction;
@@ -41,7 +45,19 @@ async function predictDisease() {
         document.getElementById("result").classList.remove("hidden");
 
     } catch (error) {
-        alert("Error connecting to server.");
-        console.error(error);
+        let errorMsg = "Error: Could not connect to backend.\n\n";
+        
+        if (error.message.includes("Failed to fetch")) {
+            errorMsg += "❌ Backend server is not running.\n";
+            errorMsg += "Make sure your Python server is running on http://localhost:8000";
+        } else if (error.message.includes("Server error")) {
+            errorMsg += "❌ Server returned an error.\n";
+            errorMsg += "Check the backend logs for more details.";
+        } else {
+            errorMsg += error.message || "Unknown error occurred";
+        }
+        
+        alert(errorMsg);
+        console.error("Detailed error:", error);
     }
 }

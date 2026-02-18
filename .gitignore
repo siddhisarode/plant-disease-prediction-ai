@@ -1,11 +1,14 @@
 # Virtual environments
 plantenv/
+plantenv_new/
 venv/
 env/
 
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
 # Jupyter
 .ipynb_checkpoints/
@@ -15,3 +18,20 @@ __pycache__/
 
 # OS
 .DS_Store
+Thumbs.db
+
+# Dataset
+dataset/
+
+# Large models
+*.h5
+*.tflite
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Frontend packages
+node_modules/
